@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My locality</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="./Components/apt.js"></script>
+    <script src="./Components/cursor.js"></script>
+
+</head>
+
+<body>
+  <a-scene>
+    <a-sky id="main-container" color="cyan"></a-sky>
+
+    <a-entity id="places-container" cursor-listener tour></a-entity>
+
+    <a-camera id="camera" wasd-controls="enabled:flase">
+        <a-entity id="app-title" position="0 0.7 -1"
+            text="font:exo2bold; align:center; width:2.5;color:#000; value: My locality">
+            <a-entity id="app-subtitle" position="0 -0.1 0"
+                text="font:dejavu; align:center;width:1; color:#000; value: vindhyachal apartments">
+            </a-entity>
+        </a-entity>
+
+        <a-entity id="camera-cursor" cursor position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color:#fff; shader:flat">
+        </a-entity>
+
+    </a-camera>
+
+
+
+</a-scene>
+
+
+
+
+</body>
+
+</html>
